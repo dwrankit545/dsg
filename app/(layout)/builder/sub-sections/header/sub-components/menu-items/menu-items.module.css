@@ -1,0 +1,7 @@
+.sub-menu-curve {
+  background-image: radial-gradient(
+    at top right,
+    transparent 69%,
+    theme(colors.primary.light) 73%
+  );
+}
