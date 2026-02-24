@@ -45,7 +45,7 @@ export async function handleContactFormAction(
       };
 
       await sendMail(mailOptions);
-
+console.log("token", token);
       return {
         success: true,
         message: 'Form successfully submitted.',
