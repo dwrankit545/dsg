@@ -55,6 +55,8 @@ export async function handleContactFormAction(
       return failedFormState;
     }
   } else {
+    console.log('validate', validate);
+    console.log('token', token);
     console.error('reCaptcha validation failed.');
     return failedFormState;
   }
