@@ -43,9 +43,9 @@ export async function handleContactFormAction(
         <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
       `,
       };
-
+      console.log('sending email');
       await sendMail(mailOptions);
-console.log("token", token);
+      console.log('email sent');
       return {
         success: true,
         message: 'Form successfully submitted.',
@@ -55,8 +55,6 @@ console.log("token", token);
       return failedFormState;
     }
   } else {
-    console.log('validate', validate);
-    console.log('token', token);
     console.error('reCaptcha validation failed.');
     return failedFormState;
   }
