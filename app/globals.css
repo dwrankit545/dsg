@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section-padding-primary {
+  @apply py-[3.125rem] md:py-[5rem] xl:py-[6.25rem];
+}
+
+.section-padding-secondary {
+  @apply py-[1.875rem] md:py-[2.75rem] xl:py-[3.125rem];
+}
