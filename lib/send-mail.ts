@@ -15,8 +15,7 @@ export async function sendMail(mailOptions: SendMailOptions) {
   const ccEmailAddress = process.env.CC_EMAIL_ADDRESS;
 
   const transporter = createTransport({
-    host: 'smtp.office365.com',
-    // host: 'smtp.gmail.com',
+    host: 'smtp.gmail.com',
     secure: false,
     port: 587,
     auth: {
