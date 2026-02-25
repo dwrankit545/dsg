@@ -14,19 +14,8 @@ export async function sendMail(mailOptions: SendMailOptions) {
   const receiverEmailAddress = process.env.RECEIVER_EMAIL_ADDRESS;
   const ccEmailAddress = process.env.CC_EMAIL_ADDRESS;
 
-  // Validate required env vars
-  if (!senderEmailAddress) {
-    throw new Error('SENDER_EMAIL_ADDRESS environment variable is missing');
-  }
-  if (!senderEmailPassword) {
-    throw new Error('SENDER_EMAIL_PASS environment variable is missing');
-  }
-  if (!receiverEmailAddress) {
-    throw new Error('RECEIVER_EMAIL_ADDRESS environment variable is missing');
-  }
-
   const transporter = createTransport({
-    host: 'smtp.office365.com',
+    host: 'smtp.gmail.com',
     secure: false,
     port: 587,
     auth: {
