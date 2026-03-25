@@ -27,7 +27,10 @@ export default async function RootLayout({ children }: PropsWithChildren) {
           crossOrigin={'anonymous'}
         />
       </head>
-      <body className={clsx(primary.variable, 'font-primary')}>
+      <body className={clsx(primary.variable, 'font-primary')} style={{
+    backgroundColor: "red",
+    padding: "10px",
+  }}>
         {draftMode().isEnabled ? (
           <PreviewProvider token={token}>
             <Layout>{children}</Layout>
